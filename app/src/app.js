@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import Header from "./header"
 
 // function Home() {
 //     <div>
@@ -12,7 +13,7 @@ function App() {
     const[ page, setPage ] = useState('home')
     return (
         <>
-        {page == 'home' && <h1>Home</h1>}
+        {page == 'home' && <Header />}
         {page == 'not home' && <h1>NOT HOME</h1>}
         {page == 'third home' && <h1>3rd Home</h1>}
         <button onClick={() => setPage('not home')}>Click Me</button>
