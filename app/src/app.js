@@ -3,7 +3,9 @@
 import { useState } from "react"
 
 function Home() {
+    <div>
     return <h1>Home w/ State</h1>
+    </div>
 }
 
 function App() {
