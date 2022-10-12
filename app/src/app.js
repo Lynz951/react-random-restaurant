@@ -2,6 +2,9 @@
 // let state = {}
 import { useState } from "react"
 
+
+const axios = require('axios');
+
 function Home() {
     <div>
     return <h1>Home w/ State</h1>
@@ -21,3 +24,15 @@ function App() {
 }
 
 export default App
+
+export async function getMenu() {
+
+    try{
+        const response = await axios.get('/api/usershttps://astute-baton-362318.ue.r.appspot.com/api/json/ ');
+        console.log('response  ', response)
+        return response.data;
+    }catch(error) {
+        return [];
+    }
+    
+}
