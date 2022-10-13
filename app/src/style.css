@@ -9,3 +9,18 @@
     background-color: rgb(192, 45, 26);
     color: #fff;
   }
+
+  .Header-Subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 1em;
+  }
+
+  .MenuItems {
+    padding: 3em;
+  }
+
+  .logo {
+    height: 150px;
+    width: 175px;
+   
+  }

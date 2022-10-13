@@ -1,16 +1,13 @@
 
 import { useState } from "react"
-import Header from "./header"
+import Header from "./header.js"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-// function Home() {
-//     <div>
-//     return <h1>Home w/ State</h1>
-//     </div>
-// }
 
 
 function App() {
     const[ page, setPage ] = useState('home')
+
     return (
         <>
         {page == 'home' && <Header />}

@@ -1,26 +1,31 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+// import React from 'react';
+// import ReactDom from 'react-dom/client';
+// import axios from 'axios';
+// import { useEffect, useState } from 'react';
 
-function GetMenu() {
-    const [page, setPage] = useState('home')
-    const [data, setData] = useState([])
-    const [name, setName] = useState()
+// import { DinnerMenu } from './menuitems'
 
-    useEffect(() => {
-        axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
-            .then((response) => {
-                setData(response.data);
-             });
-    }, []);
 
-        if(data.length === 0) {
-            return null
-        }
+// function GetMenu() {
+//     const [page, setPage] = useState('home')
+//     const [menu, setMenu] = useState([])
+
+//     useEffect(() => {
+//         axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
+//             .then((response) => {
+//                 setMenu(response.data);
+//              });
+//     }, []);
+
+//         if(data.length === 0) {
+//             return null
+//         }
+
         
-        console.log(data)
-        console.log(data[28].id)
-    }
-    export default GetMenu
+//         console.log(data)
+//         console.log(data[28].id)
+//     }
+//     export default GetMenu
 
 
  
