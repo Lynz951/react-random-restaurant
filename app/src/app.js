@@ -1,6 +1,7 @@
 
 import { useState } from "react"
 import Header from "./header.js"
+import Footer from "./footer.js"
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
