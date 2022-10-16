@@ -8,11 +8,16 @@
     margin-bottom: 2em;
     background-image: url("wallpaper.png");
     color: black;
+    font-weight: bold;
   }
 
+  .Name {
+    font-size: 40px;
+  }
   .Header-Subtitle {
     color: black;
     padding: 1em;
+    align-items: baseline;
   }
 
   .logo {
