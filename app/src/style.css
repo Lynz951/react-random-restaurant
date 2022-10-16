@@ -1,0 +1,42 @@
+.Header {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: rgb(192, 45, 26);
+    color: #fff;
+  }
+
+  .Header-Subtitle {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 1em;
+  }
+
+  .logo {
+    height: 150px;
+    width: 175px; 
+  }
+
+  .footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: pink;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .map {
+    height: 100px;
+    width: 150px;
+  }
+
+  /* .hours {
+    justify-content: right;
+    align-items: right;
+  } */
