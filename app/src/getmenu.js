@@ -27,15 +27,15 @@ function GetMenu() {
             setName(data[0].category.title)
             
         }
-
-        return (
-            <>
+        if (page == 'home') {
+            return (
+          <div className='middle'>
             <h1>{name}</h1>
-            {/* <h2>{title}</h2> */}
             <button onClick={BtnClick}>Get Full Menu</button>
-            </>
+          </div>
         )
     }
+}
     export default GetMenu
 
 
