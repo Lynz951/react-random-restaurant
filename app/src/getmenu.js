@@ -20,15 +20,13 @@ function GetMenu() {
         if(data.length === 0) {
             return null
         }
-
-    
-        function BtnClick() {
-            setName(data[10].category.title)   
-        }
+  
         console.log(data);
-        const apps = (
+
+        const menu = (
             <div className='menu'>
-                <h1>Appetizers</h1>
+                <h2>MENU</h2>
+                <h3>Appetizers</h3>
                 <ul>
                     {data.filter(item => [17, 32, 45, 83, 66, 80].includes(item.id)).map(item => 
                         <li key={item.id}>
@@ -36,7 +34,8 @@ function GetMenu() {
                         </li>
                      )}
                 </ul>
-                <h1>Entrees</h1>
+
+                <h3>Entrees</h3>
                 <ul>
                     {data.filter(item => [21, 28, 68, 86, 89, 64, 54].includes(item.id)).map(item => 
                         <li key={item.id}>
@@ -44,7 +43,8 @@ function GetMenu() {
                         </li>
                      )}
                 </ul>
-                <h1>Desserts</h1>
+
+                <h3>Desserts</h3>
                 <ul>
                     {data.filter(item => [5, 22, 29, 85, 91].includes(item.id)).map(item => 
                         <li key={item.id}>
@@ -55,11 +55,16 @@ function GetMenu() {
             </div>
         );
 
+          
+        function BtnClick() {
+            setName(data[10].category.title)   
+        }
+        
         if (page == 'home') {
             return (
           <div className='middle'>
             <h1>{name}</h1>
-            {apps}
+            {menu}
             <button onClick={BtnClick}>Get Full Menu</button>
           </div>
         )

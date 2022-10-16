@@ -6,12 +6,12 @@
     align-items: baseline;
     padding: 1em;
     margin-bottom: 2em;
-    background-color: rgb(192, 45, 26);
-    color: #fff;
+    background-image: url("wallpaper.png");
+    color: black;
   }
 
   .Header-Subtitle {
-    color: rgba(255, 255, 255, 0.75);
+    color: black;
     padding: 1em;
   }
 
@@ -22,7 +22,9 @@
 
   .menu {
     overflow-y: auto;
-    background-color: aliceblue;
+    background-color: azure;
+    padding: 1em;
+    margin-bottom: 2em;
   }
 
   .footer{
