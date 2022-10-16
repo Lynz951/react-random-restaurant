@@ -20,11 +20,16 @@
     width: 175px; 
   }
 
+  .menu {
+    overflow-y: auto;
+    background-color: aliceblue;
+  }
+
   .footer{
     margin-top: 1rem;
     padding: 1rem;
     background-color: pink;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
