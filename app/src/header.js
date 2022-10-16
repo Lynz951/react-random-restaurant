@@ -8,8 +8,8 @@ function Header() {
   return (
     <div className="Header">
       <img src={logo} alt="Logo" className="logo"/>
-      <h1>Wise Norah's</h1>
-      <div className="Header-Subtitle">Lexington's Favorite Vegetarian Bistro</div>
+      <div className='Name'>Wise Norah's</div>
+      <div className="Header-Subtitle">"Lexington's Favorite Vegetarian Bistro"</div>
      </div>
   )
 }

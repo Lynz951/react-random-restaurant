@@ -6,13 +6,18 @@
     align-items: baseline;
     padding: 1em;
     margin-bottom: 2em;
-    background-color: rgb(192, 45, 26);
-    color: #fff;
+    background-image: url("wallpaper.png");
+    color: black;
+    font-weight: bold;
   }
 
+  .Name {
+    font-size: 40px;
+  }
   .Header-Subtitle {
-    color: rgba(255, 255, 255, 0.75);
+    color: black;
     padding: 1em;
+    align-items: baseline;
   }
 
   .logo {
@@ -20,11 +25,18 @@
     width: 175px; 
   }
 
+  .menu {
+    overflow-y: auto;
+    background-color: azure;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+
   .footer{
     margin-top: 1rem;
     padding: 1rem;
     background-color: pink;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 0;
     width: 100%;
