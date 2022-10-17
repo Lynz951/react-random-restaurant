@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: baseline;
     padding: 1em;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
     background-image: url("wallpaper.png");
     color: black;
     font-weight: bold;
@@ -31,11 +31,11 @@
     overflow-y: auto;
     background-color: azure;
     padding: 1em;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
   }
 
   .footer{
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     padding: 1rem;
     background-color: pink;
     /* position: fixed; */

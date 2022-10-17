@@ -13,7 +13,7 @@ import map from './map.png'
             Lexington, KY 40508</p>
             <img src={map} alt="map" className="map"/>
             </div>
-        <div className="hours">
+            <div className="hours">
             <h2>Hours of Operation</h2>
             <h6>M-F: 9am to 10pm
                 Saturday: 8am to 11pm

@@ -62,13 +62,13 @@ function GetMenu() {
         
         if (page == 'home') {
             return (
-          <div className='middle'>
-            <h1>{name}</h1>
-            {menu}
-            <button onClick={BtnClick}>Get Full Menu</button>
-          </div>
-        )
-    }
+                <div className='middle'>
+                <h1>{name}</h1>
+                 {menu}
+                 <button onClick={BtnClick}>Get Full Menu</button>
+                </div>
+                    )
+            }
 }
     export default GetMenu
 
