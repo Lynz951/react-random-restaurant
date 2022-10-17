@@ -4,6 +4,7 @@ import App from './app.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import GetMenu from './getmenu.js'
 import Footer from './footer.js';
+import SimpleMap from './map.js';
 
 
 
@@ -13,5 +14,6 @@ root.render(
       <App />
      <GetMenu />
      <Footer />
+     {/* <SimpleMap /> */}
   </React.StrictMode>
 );
