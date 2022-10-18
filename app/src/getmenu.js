@@ -4,25 +4,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 
-
-function GetMenu() {
-    const [page, setPage] = useState('home')
-    const [name , setName] = useState()
-    const [data, setData] = useState([])
-    
-    useEffect(() => {
-        axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
-            .then((response) => {
-                setData(response.data);
-             });
-    }, []);
-
-        if(data.length === 0) {
-            return null
-        }
-  
-        console.log(data);
-
         const menu = (
             <div className='menu'>
                 <h2>MENU</h2>
@@ -55,12 +36,7 @@ function GetMenu() {
             </div>
         );
 
-          
-        function BtnClick() {
-            setName(data[10].category.title)   
-        }
-        
-        if (page == 'home') {
+        if (page == 'Home') {
             return (
                 <div className='middle'>
                 <h1>{name}</h1>
