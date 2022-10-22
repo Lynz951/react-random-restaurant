@@ -1,9 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import './style.css'
-import map from './map.png'
-
-
 
     const Footer = () => (
       <div className="footer">
@@ -23,5 +20,5 @@ import map from './map.png'
       </div>
     );
     
-    export default Footer;
+    // export default Footer;
 
