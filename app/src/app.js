@@ -11,10 +11,10 @@ function App() {
 
     return (
         <>
-        {page == 'home' && <Header />}
-        {page == 'not home' && <h1>NOT HOME</h1>}
-        {page == 'third home' && <h1>3rd Home</h1>}
-        {/* <button onClick={() => setPage('not home')}>Click Me</button> */}
+        {(page === 'home') && <Header />}
+        {(page === 'not home') && <Header />}
+        <button onClick={() => setPage('not home')}>Click Me</button>
+        <Footer />
         </>
     )
 }

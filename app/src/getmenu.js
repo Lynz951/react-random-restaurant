@@ -1,9 +1,6 @@
 import React from 'react';
-import ReactDom from 'react-dom/client';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
-
 
 function GetMenu() {
     const [page, setPage] = useState('home')
@@ -60,7 +57,7 @@ function GetMenu() {
             setName(data[10].category.title)   
         }
         
-        if (page == 'home') {
+        if (page === 'home') {
             return (
           <div className='middle'>
             <h1>{name}</h1>
