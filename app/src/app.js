@@ -3,6 +3,7 @@ import { useState } from "react"
 import Header from "./header.js"
 import Footer from "./footer.js"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import GetMenu from "./getmenu.js"
 
 
 
@@ -11,7 +12,8 @@ function App() {
 
     return (
         <>
-        {(page === 'home') && <Header />}
+        <Header />
+        {(page === 'home') && <GetMenu />}
         {(page === 'not home') && <Header />}
         <button onClick={() => setPage('not home')}>Click Me</button>
         <Footer />

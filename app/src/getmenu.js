@@ -8,7 +8,7 @@ function GetMenu() {
     const [data, setData] = useState([])
     
     useEffect(() => {
-        axios.get('https://astute-baton-362318.ue.r.appspot.com/api/json/')
+        axios.get('https://8000-lynz951-backendbistro-k9zrpz51flw.ws-us75.gitpod.io/backend_bistro/')
             .then((response) => {
                 setData(response.data);
              });
@@ -25,27 +25,36 @@ function GetMenu() {
                 <h2>MENU</h2>
                 <h3>Appetizers</h3>
                 <ul>
-                    {data.filter(item => [17, 32, 45, 83, 66, 80].includes(item.id)).map(item => 
+                    {data.filter(item => item.category.title === 'Appetizer').map(item => 
                         <li key={item.id}>
-                        {item.title}{"    $"}{item.price}
+                            <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
+                        </li>
+                     )}
+                </ul>
+            
+                <h3>Entrees</h3>
+                <ul>
+                    {data.filter(item => item.category.title === 'Entree').map(item => 
+                        <li key={item.id}>
+                            <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
                         </li>
                      )}
                 </ul>
 
-                <h3>Entrees</h3>
+                <h3>Sides</h3>
                 <ul>
-                    {data.filter(item => [21, 28, 68, 86, 89, 64, 54].includes(item.id)).map(item => 
+                    {data.filter(item => item.category.title === 'Side').map(item => 
                         <li key={item.id}>
-                        {item.title}{"    $"}{item.price}
+                            <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
                         </li>
                      )}
                 </ul>
 
                 <h3>Desserts</h3>
                 <ul>
-                    {data.filter(item => [5, 22, 29, 85, 91].includes(item.id)).map(item => 
+                    {data.filter(item => item.category.title === 'Dessert').map(item => 
                         <li key={item.id}>
-                        {item.title}{"    $"}{item.price}
+                            <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
                         </li>
                      )}
                 </ul>
@@ -56,6 +65,7 @@ function GetMenu() {
         function BtnClick() {
             setName(data[10].category.title)   
         }
+        console.log(data[0])
         
         if (page === 'home') {
             return (
