@@ -1,26 +1,28 @@
 import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import GetMenu from './getmenu';
 
-function GetMenu() {
-    const [page, setPage] = useState('home')
+function VeganMenu() {
+    const [page, setPage] = useState('nothome')
     const [name , setName] = useState()
     const [data, setData] = useState([])
-    
+  {
     useEffect(() => {
-        axios.get('https://8000-lynz951-backendbistro-k9zrpz51flw.ws-us75.gitpod.io/backend_bistro/')
+        axios.get('https://8000-lynz951-backendbistro-k9zrpz51flw.ws-us75.gitpod.io/backend_bistro/1/')
             .then((response) => {
                 setData(response.data);
              });
     }, []);
-
+    }
+        console.log(data)
         if(data.length === 0) {
             return null
         }
 
-        const menu = (
+        const veganmenu = (
             <div className='menu'>
-                <h2>MENU</h2>
+                <h2>VEGAN MENU</h2>
                 <h3>Appetizers</h3>
                 <ul>
                     {data.filter(item => item.category.title === 'Appetizer').map(item => 
@@ -58,23 +60,14 @@ function GetMenu() {
                 </ul>
             </div>
         );
-          
-        function BtnClick() {
-            setName("Today's Specials:")
-        }
+
         
-        if (page === 'home') {
             return (
           <div className='middle'>
-            <h1>{name}</h1>
-            {menu}
-            <button onClick={BtnClick}>Get Today's Specials</button>
+            {veganmenu}
+            <button onClick={GetMenu}>Get Full Menu</button>
           </div>
         )
-    }
+    
 }
-    export default GetMenu
-
-
- 
-
+    export default VeganMenu

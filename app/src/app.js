@@ -4,6 +4,7 @@ import Header from "./header.js"
 import Footer from "./footer.js"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import GetMenu from "./getmenu.js"
+import VeganMenu from "./getvegan.js"
 
 
 
@@ -14,8 +15,8 @@ function App() {
         <>
         <Header />
         {(page === 'home') && <GetMenu />}
-        {(page === 'not home') && <Header />}
-        <button onClick={() => setPage('not home')}>Click Me</button>
+        {(page === 'nothome') && <VeganMenu />}
+        <button onClick={() => setPage('nothome')}>Click for Vegan Only</button>
         <Footer />
         </>
     )
