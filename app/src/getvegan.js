@@ -4,17 +4,15 @@ import { useEffect, useState } from 'react';
 import GetMenu from './getmenu';
 
 function VeganMenu() {
-    const [page, setPage] = useState('nothome')
-    const [name , setName] = useState()
     const [data, setData] = useState([])
-  {
+  
     useEffect(() => {
-        axios.get('https://8000-lynz951-backendbistro-k9zrpz51flw.ws-us75.gitpod.io/backend_bistro/1/')
+        axios.get('https://8000-lynz951-backendbistro-k9zrpz51flw.ws-us75.gitpod.io/backend_bistro/2/')
             .then((response) => {
                 setData(response.data);
              });
     }, []);
-    }
+    
         console.log(data)
         if(data.length === 0) {
             return null
@@ -65,7 +63,6 @@ function VeganMenu() {
             return (
           <div className='middle'>
             {veganmenu}
-            <button onClick={GetMenu}>Get Full Menu</button>
           </div>
         )
     

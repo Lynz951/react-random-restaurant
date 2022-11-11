@@ -17,6 +17,8 @@ function App() {
         {(page === 'home') && <GetMenu />}
         {(page === 'nothome') && <VeganMenu />}
         <button onClick={() => setPage('nothome')}>Click for Vegan Only</button>
+        <button onClick={() => setPage('home')}>Get Full Menu</button>
+
         <Footer />
         </>
     )

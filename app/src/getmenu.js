@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 function GetMenu() {
-    const [page, setPage] = useState('home')
     const [name , setName] = useState()
     const [data, setData] = useState([])
     
@@ -60,10 +59,9 @@ function GetMenu() {
         );
           
         function BtnClick() {
-            setName("Today's Specials:")
+            setName("Today's Special: Vegetable soup and freshbread for only $5!!")
         }
         
-        if (page === 'home') {
             return (
           <div className='middle'>
             <h1>{name}</h1>
@@ -71,7 +69,6 @@ function GetMenu() {
             <button onClick={BtnClick}>Get Today's Specials</button>
           </div>
         )
-    }
 }
     export default GetMenu
 
