@@ -59,7 +59,7 @@ function GetMenu() {
         );
           
         function BtnClick() {
-            setName("Today's Special: Vegetable soup and freshbread for only $5!!")
+            setName("Today's Special: Vegetable soup and fresh bread for only $5!!")
         }
         
             return (
