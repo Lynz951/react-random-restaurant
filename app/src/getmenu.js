@@ -7,12 +7,12 @@ function GetMenu() {
     const [data, setData] = useState([])
     
     useEffect(() => {
-        axios.get('https://8000-lynz951-backendbistro-k9zrpz51flw.ws-us75.gitpod.io/backend_bistro/')
+        axios.get('https://8000-lynz951-backendbistro-k9zrpz51flw.ws-us75.gitpod.io/menuitems/')
             .then((response) => {
                 setData(response.data);
              });
     }, []);
-
+        console.log(data)
         if(data.length === 0) {
             return null
         }
@@ -22,7 +22,7 @@ function GetMenu() {
                 <h2>MENU</h2>
                 <h3>Appetizers</h3>
                 <ul>
-                    {data.filter(item => item.category.title === 'Appetizer').map(item => 
+                    {data.filter(item => item.category.category === 'Appetizer').map(item => 
                         <li key={item.id}>
                             <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
                         </li>
@@ -31,7 +31,7 @@ function GetMenu() {
             
                 <h3>Entrees</h3>
                 <ul>
-                    {data.filter(item => item.category.title === 'Entree').map(item => 
+                    {data.filter(item => item.category.category === 'Entree').map(item => 
                         <li key={item.id}>
                             <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
                         </li>
@@ -40,7 +40,7 @@ function GetMenu() {
 
                 <h3>Sides</h3>
                 <ul>
-                    {data.filter(item => item.category.title === 'Side').map(item => 
+                    {data.filter(item => item.category.category === 'Side').map(item => 
                         <li key={item.id}>
                             <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
                         </li>
@@ -49,7 +49,7 @@ function GetMenu() {
 
                 <h3>Desserts</h3>
                 <ul>
-                    {data.filter(item => item.category.title === 'Dessert').map(item => 
+                    {data.filter(item => item.category.category === 'Dessert').map(item => 
                         <li key={item.id}>
                             <h4>{item.title} </h4> {item.description} {"    $"}{item.price}
                         </li>
